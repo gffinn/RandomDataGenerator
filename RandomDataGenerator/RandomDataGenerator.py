@@ -20,10 +20,10 @@ def generate_demo_data(num_lines):
             'StartDate': (datetime.now() - timedelta(days=random.randint(0, 365))).strftime('%Y-%m-%d'),
             'EndDate': (datetime.now() + timedelta(days=random.randint(1, 30))).strftime('%Y-%m-%d'),
             'Price': round(random.uniform(10, 1000), 2),
-            'Paid': random.choice(['Yes', 'No']),
-            'Complete': random.choice(['Yes', 'No']),
+            'Paid': round(random.uniform(10, 1000), 2),
+            'Complete':  random.choice([1, 2]),
             'City': random.choice(cities),
-            'State': random.choice(states),
+            'USState': random.choice(states),
             'Birthdate': (datetime.now() - timedelta(days=random.randint(365*18, 365*80))).strftime('%Y-%m-%d')
         }
         data.append(row)
